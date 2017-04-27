@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dyn_image.name %>
+</p>
+
+<p>
+  <strong>Alttext:</strong>
+  <%= @dyn_image.alttext %>
+</p>
+
+<p>
+  <strong>Caption:</strong>
+  <%= @dyn_image.caption %>
+</p>
+
+<!--
+<p>
+  <strong>Image:</strong>
+  %= image_tag @dyn_image.image %>
+</p>
+-->
+
+<p>
+  <strong>Pagename:</strong>
+  <%= @dyn_image.pagename %>
+</p>
+<%= link_to 'Edit', edit_dyn_image_path(@dyn_image) %> |
+<%= link_to 'Back', dyn_images_path %>

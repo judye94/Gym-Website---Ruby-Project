@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+<br>
+<h1>Dynamic Images</h1>
+
+<% DynamicPage.all.each do | dynamicpage| %>
+      <div class='btn-group' role='group' aria-label="Page Select">
+          <%= link_to dynamicpage.name, images_path(pagename: dynamicpage.name), class: 'btn btn-secondary' %>
+      </div>
+  <%end%><br>
+
+<table class="table table-striped">
+  <thead class="thead thead-default">
+    <tr>
+      <th>Name</th>
+      <th>Alttext</th>
+      <th>Caption</th>
+      <!--<th>Image</th>-->
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dyn_images.each do |dyn_image| %>
+      <tr>
+        <td><%= dyn_image.name %></td>
+        <td><%= dyn_image.alttext %></td>
+        <td><%= dyn_image.caption %></td>
+        <!--<<td> image_tag dyn_image.image.url(:thumb) %></td>-->
+        <td><%= link_to 'Show', dyn_image %></td>
+        <td><%= link_to 'Edit', edit_dyn_image_path(dyn_image) %></td>
+        <td><%= link_to 'Destroy', dyn_image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dynamic Image', new_dyn_image_path %>

@@ -1,0 +1,32 @@
+<%= form_for(dynamic_page) do |f| %>
+  <% if dynamic_page.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dynamic_page.errors.count, "error") %> prohibited this dynamic_page from being saved:</h2>
+
+      <ul>
+      <% dynamic_page.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name, class: 'form-control-label' %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :title, class: 'form-control-label'%>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :pagetype, class: 'form-control-label' %>
+    <%= f.text_field :pagetype, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

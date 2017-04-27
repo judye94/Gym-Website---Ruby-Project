@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @dy_content.description %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @dy_content.content %>
+</p>
+
+<p>
+  <strong>Pagename:</strong>
+  <%= @dy_content.pagename %>
+</p>
+
+<%= link_to 'Edit', edit_dy_content_path(@dy_content) %> |
+<%= link_to 'Back', dy_contents_path %>

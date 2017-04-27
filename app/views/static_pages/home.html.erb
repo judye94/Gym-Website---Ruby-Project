@@ -9,23 +9,21 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-     <%= link_to image_tag("img6.jpg", alt: "slide 1")%>
+     <%= link_to image_tag((DynImage.find_by name: 'Slider_Image1').image, alt: (DynImage.find_by name: 'Slider_Image1').alttext)%>
      <div class="container">
             <div class="carousel-caption">
-              <h1>Be Proud To Be At Dat Gym</h1>
-              <p>Start Your Training Now!</p>
+              <h1><%= (DyContent.find_by description: 'Slider_Header0').content %></h1>
+              <p><%= (DyContent.find_by description: 'Slider_Paragraph0').content %></p>
               <%= link_to "Sign up now!", 'membership', class: "btn btn-lg btn-primary" %>
-               
-               
             </div>
           </div>
     </div>
     <div class="item">
-      <%= link_to image_tag("img1.jpg")%>
+      <%= link_to image_tag((DynImage.find_by name: 'Slider_Image2').image, alt: (DynImage.find_by name: 'Slider_Image2').alttext)%>
       <div class="container">
             <div class="carousel-caption">
-              <h1>Never Miss Chest Day!</h1>
-              <p>Gym Instructors will be at your side at all times. Let us help you reach your goal </p>
+              <h1><%= (DyContent.find_by description: 'Slider_Header1').content %></h1>
+              <p><%= (DyContent.find_by description: 'Slider_Paragraph1').content %></p>
                <%= link_to "Learn More", 'contact', class: "btn btn-lg btn-primary" %>
             </div>
     </div>
@@ -34,8 +32,8 @@
      <%= link_to image_tag("img5.jpg")%>
      <div class="container">
             <div class="carousel-caption">
-              <h1>You Are Not Alone.</h1>
-              <p>Weekly Classes are now available. Book Today!</p>
+              <h1><%= (DyContent.find_by description: 'Slider_Header2').content %></h1>
+              <p><%= (DyContent.find_by description: 'Slider_Paragraph2').content %></p>
                <%= link_to "View Classes", 'classes', class: "btn btn-lg btn-primary" %>
             </div>
           </div>
@@ -63,12 +61,11 @@
       
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2 class="featurette-heading"><%= (DyContent.find_by description: 'Feat1_Heading_Part1').content %> <span class="text-muted"><%= (DyContent.find_by description: 'Feat1_Heading_Part2').content %></span></h2>
+          <p class="lead"><%= (DyContent.find_by description: 'Feat1_content').content %></p>
         </div>
         <div class="col-md-5">
             <%= link_to image_tag("mem1.jpg", alt: "logo", class: "featurette-image img-responsive center-block")%>
-
         </div>
       </div>
 
@@ -76,8 +73,8 @@
 
       <div class="row featurette">
         <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2 class="featurette-heading"><%= (DyContent.find_by description: 'Feat2_Heading_Part2').content %> <span class="text-muted"><%= (DyContent.find_by description: 'Feat2_Heading_Part1').content %></span></h2>
+          <p class="lead"><%= (DyContent.find_by description: 'Feat2_content').content %></p>
         </div>
         <div class="col-md-5 col-md-pull-7">
           <%= link_to image_tag("img4.jpg", alt: "logo", class: "featurette-image img-responsive center-block")%>
@@ -88,8 +85,8 @@
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2 class="featurette-heading"><%= (DyContent.find_by description: 'Feat3_Heading_Part1').content %> <span class="text-muted"><%= (DyContent.find_by description: 'Feat3_Heading_Part2').content %></span></h2>
+          <p class="lead"><%= (DyContent.find_by description: 'Feat3_content').content %> </p>
         </div>
         <div class="col-md-5">
           <%= link_to image_tag("img7.jpg", alt: "logo", class: "featurette-image img-responsive center-block")%>

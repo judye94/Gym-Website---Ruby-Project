@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+<br>
+<h1>Dynamic Pages</h1>
+
+<table class="table table-striped">
+  <thead class="thead thead-default">
+    <tr>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Pagetype</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dynamic_pages.each do |dynamic_page| %>
+      <tr>
+        <td><%= dynamic_page.name %></td>
+        <td><%= dynamic_page.title %></td>
+        <td><%= dynamic_page.pagetype %></td>
+        <td><%= link_to 'Show', dynamic_page %></td>
+        <td><%= link_to 'Edit', edit_dynamic_page_path(dynamic_page) %></td>
+        <td><%= link_to 'Destroy', dynamic_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dynamic Page', new_dynamic_page_path, class: 'btn btn-secondary' %>

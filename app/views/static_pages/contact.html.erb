@@ -1,83 +1,98 @@
 <div class="container" id: 'form'>
 
-    <form class="well form-horizontal" action=" " method="post"  id="contact_form">
-<fieldset>
-
-<!-- Form Name -->
-<legend>Contact Us Today!</legend>
-
-<!-- Text input-->
-
-<div class="form-group">
-  <label class="col-md-4 control-label">First Name</label>  
-  <div class="col-md-4 inputGroupContainer">
-  <div class="input-group">
-  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
-    </div>
-  </div>
-</div>
-
-<!-- Text input-->
-
-<div class="form-group">
-  <label class="col-md-4 control-label" >Last Name</label> 
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
-    </div>
-  </div>
-</div>
-
-<!-- Text input-->
-       <div class="form-group">
-  <label class="col-md-4 control-label">E-Mail</label>  
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-  <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
-    </div>
-  </div>
-</div>
-
-
-<!-- Text input-->
-       
-<div class="form-group">
-  <label class="col-md-4 control-label">Phone #</label>  
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-  <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
-    </div>
-  </div>
-</div>
-
-<!-- Text area -->
+  <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+  <fieldset>
+  <!-- Form Name -->
+  <legend><%= (DyContent.find_by description: 'Form_Legend').content %></legend>
   
-<div class="form-group">
-  <label class="col-md-4 control-label">Project Description</label>
+  <!-- Text input-->
+  
+  <div class="form-group">
+    <label class="col-md-4 control-label">First Name</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-        	<textarea class="form-control" name="comment" placeholder="Project Description"></textarea>
+    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+    <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+      </div>
+    </div>
   </div>
+
+  <!-- Text input-->
+  
+  <div class="form-group">
+    <label class="col-md-4 control-label" >Last Name</label> 
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+    <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+      </div>
+    </div>
   </div>
-</div>
-
-<!-- Success message -->
-<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
-
-<!-- Button -->
-<div class="form-group">
-  <label class="col-md-4 control-label"></label>
-  <div class="col-md-4">
-    <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
+  
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label">E-Mail</label>  
+      <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+          <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+      </div>
+    </div>
   </div>
-</div>
-
-</fieldset>
-</form>
-</div>
-    </div><!-- /.container -->
+  
+  
+  <!-- Text input-->
+         
+  <div class="form-group">
+    <label class="col-md-4 control-label">Phone #</label>  
+      <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+          <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
+      </div>
+    </div>
+  </div>
+  
+  <!-- Text area -->
+    
+  <div class="form-group">
+    <label class="col-md-4 control-label">Project Description</label>
+      <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+          <textarea class="form-control" name="comment" placeholder="Project Description"></textarea>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Success message -->
+  <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+  
+  <!-- Button -->
+  <div class="form-group">
+    <label class="col-md-4 control-label"></label>
+      <div class="col-md-4">
+        <button type="submit" class="btn btn-warning" >Send <span class="glyphicon glyphicon-send"></span></button>
+    </div>
+  </div>
+  </fieldset>
+  </form>
+  
+  <div>
+    <div class="form-group">
+      <h3 class="form-group"><%= (DyContent.find_by description: 'Address_Header').content %></h3>
+      <address class="form-group">
+        <%= (DyContent.find_by description: 'Address_Street').content %><br>
+        <%= (DyContent.find_by description: 'Address_Extension').content %><br>
+        <%= (DyContent.find_by description: 'Address_City').content %><br>
+        <%= (DyContent.find_by description: 'Address_Eircode').content %><br>
+      </address>
+    </div>
+  </div>
+ 
+  <div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2382.6973467719563!2d-6.279901054405767!3d53.33077211777081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670c1833b915c7%3A0x4f83acae16f5062e!2sGriffith+College!5e0!3m2!1sen!2sie!4v1493200106714" class="fill" frameborder="0" style="border:0" allowfullscreen></iframe>    
+  </div>  
+ 
+  </div>
+</div><!-- /.container -->

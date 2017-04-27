@@ -1,0 +1,2 @@
+module DyContentsHelper
+end
