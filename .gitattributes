@@ -1,0 +1,3 @@
+##Change code language attributes to PHP
+*.html linguist-language=PHP
+*.html linguist-language=Ruby
