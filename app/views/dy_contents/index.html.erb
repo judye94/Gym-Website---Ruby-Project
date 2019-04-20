@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <br>
-<h1>Dy Contents</h1>
+<h1>Dynamic Contents</h1>
 
 <% DynamicPage.all.each do | dynamicpage| %>
       <div class='btn-group' role='group' aria-label="Page Select">
@@ -26,7 +26,7 @@
         <td><%= dy_content.pagename %></td>
         <td><%= link_to 'Show', dy_content %></td>
         <td><%= link_to 'Edit', edit_dy_content_path(dy_content) %></td>
-        <td><%= link_to 'Destroy', dy_content, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <!--<td>%= link_to 'Destroy', dy_content, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
       </tr>
     <% end %>
   </tbody>

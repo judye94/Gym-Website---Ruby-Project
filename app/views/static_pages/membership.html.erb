@@ -1,6 +1,56 @@
-<% provide(:title, "Membership") %>
+<!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    <h1>Sample App</h1>
-    <p>
-      This is the home page.
-    </p>
+    <div class="container">
+      
+      <hr class="featurette-divider">
+      
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading"><%= (DyContent.find_by description: 'Membership_Feat1_part1').content %> <span class="text-muted"><%= (DyContent.find_by description: 'Membership_Feat1_part2').content %></span></h2>
+          <p class="lead"><span class="glyphicon glyphicon-ok" aria-hidden="true">&nbsp<%= (DyContent.find_by description: 'Membership_Feat1_row1').content %></p></span>
+          <p class="lead"><span class="glyphicon glyphicon-ok" aria-hidden="true">&nbsp<%= (DyContent.find_by description: 'Membership_Feat1_row2').content %></p></span>
+          <p class="lead"><span class="glyphicon glyphicon-ok" aria-hidden="true">&nbsp<%= (DyContent.find_by description: 'Membership_Feat1_row3').content %> </p></span>
+           <%= link_to "Learn More", 'contact', class: "btn btn-lg btn-primary" %>
+        </div>
+        <div class="col-md-5">
+            <%= link_to image_tag("mem1.jpg", alt: "logo", class: "featurette-image img-responsive center-block")%>
+  
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading"><%= (DyContent.find_by description: 'Membership_Feat2_header').content %></h2>
+          <p class="lead"><%= (DyContent.find_by description: 'Membership_Feat2_paragraph').content %></p>
+           <p class="lead"><span class="glyphicon glyphicon-ok" aria-hidden="true">&nbsp<%= (DyContent.find_by description: 'Membership_Feat2_row1').content %></p></span>
+            <p class="lead"><span class="glyphicon glyphicon-ok" aria-hidden="true">&nbsp<%= (DyContent.find_by description: 'Membership_Feat2_row2').content %></p></span>
+            <p class="lead"><span class="glyphicon glyphicon-ok" aria-hidden="true">&nbsp<%= (DyContent.find_by description: 'Membership_Feat2_row3').content %></p></span>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <%= link_to image_tag("img9.jpg", alt: "logo", class: "featurette-image img-responsive center-block")%>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading"><%= (DyContent.find_by description: 'Membership_Feat3_header').content %></h2>
+          <p class="lead"><%= (DyContent.find_by description: 'Membership_Feat3_paragraph').content %></p>
+          <p class="lead"><%= (DyContent.find_by description: 'Membership_Feat3_paragraph2').content %></p>
+          <p class="lead"><%= (DyContent.find_by description: 'Membership_Feat3_paragraph3').content %></p>
+        </div>
+        <div class="col-md-5">
+          <%= link_to image_tag("img7.jpg", alt: "logo", class: "featurette-image img-responsive center-block")%>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+    
+      

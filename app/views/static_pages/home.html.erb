@@ -18,8 +18,9 @@
             </div>
           </div>
     </div>
+    
     <div class="item">
-      <%= link_to image_tag((DynImage.find_by name: 'Slider_Image1').image, alt: (DynImage.find_by name: 'Slider_Image1').alttext)%>
+      <%= link_to image_tag("img5.jpg", alt: "slide 2")%>
       <div class="container">
             <div class="carousel-caption">
               <h1><%= (DyContent.find_by description: 'Slider_Header1').content %></h1>
@@ -50,6 +51,7 @@
         <span class="sr-only">Next</span>
       </a>
 </div>
+
 
  <!-- Marketing messaging and featurettes
     ================================================== -->
@@ -94,6 +96,8 @@
       </div>
 
       <hr class="featurette-divider">
+      
+      </div>
 
       <!-- /END THE FEATURETTES -->
       

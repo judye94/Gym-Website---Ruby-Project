@@ -34,13 +34,14 @@
   right: 0;
   left: 0;
   z-index: 100;
+ 
 }
 
 /* Flip around the padding for proper display in narrow viewports */
 .navbar-wrapper > .container {
   padding-right: 0;
   padding-left: 0;
-  
+
 }
 .navbar-wrapper .navbar {
   padding-right: 15px;
@@ -49,6 +50,16 @@
 .navbar-wrapper .navbar .container {
   width:auto;
 
+  
+}
+
+ .navbar .nav pull-right{
+ float: right;
+    margin-right: 98px;
+}
+
+.navbar .nav pull-right > li > a {
+ color:red;
 }
 
 /* CUSTOMIZE THE CAROUSEL
@@ -209,6 +220,7 @@ body {
 .nav-sidebar > li > a {
   padding-right: 20px;
   padding-left: 20px;
+  
 }
 .nav-sidebar > .active > a,
 .nav-sidebar > .active > a:hover,
@@ -262,8 +274,39 @@ body {
 
 }
 
-.form{
-  width: 50px;
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .fill {

@@ -20,7 +20,9 @@
         <td><%= dynamic_page.pagetype %></td>
         <td><%= link_to 'Show', dynamic_page %></td>
         <td><%= link_to 'Edit', edit_dynamic_page_path(dynamic_page) %></td>
-        <td><%= link_to 'Destroy', dynamic_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if !dynamic_page.pagetype == "default" %> 
+          <td><%= link_to 'Destroy', dynamic_page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
